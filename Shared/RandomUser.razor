@@ -4,9 +4,7 @@
     @if (RandUser != null)
     {
         @RandUser.Results[0].Name.First
-
     }
-
 </div>
 
 @code {
@@ -17,12 +15,9 @@
     {
         Console.WriteLine("Fetching data...");
 
-        RandUser = await Http.GetFromJsonAsync<RandomUsers>("http://randomuser.me/api/?results=1");
+        RandUser = await Http.GetFromJsonAsync<RandomUsers>("https://randomuser.me/api/?results=1");
 
         StateHasChanged();
-
     }
+
 }
-
-
-
